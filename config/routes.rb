@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :pins
   get 'welcome/index'
   root 'welcome#index'
+  get 'mypins' => 'pins#mypins'
+  get 'pinsof/:user_id' => 'pins#pinsof', :as => 'pinsof'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

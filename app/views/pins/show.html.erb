@@ -17,3 +17,4 @@
 
 <%= link_to 'Edit', edit_pin_path(@pin) %> |
 <%= link_to 'Back', pins_path %>
+<%= link_to 'More pins from the same user', pinsof_path(@pin.user.id) %>
